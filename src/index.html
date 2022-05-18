@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유효성 검사</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="validator.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>유효성 검사</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="validator.js"></script>
-</head>
+  <body>
+    <img src="./img/signUpBg.jpeg" />
 
-<body>
-  <h1>회원가입</h1>
+    <h1>회원가입</h1>
 
-  <fieldset>
-    <label>아이디</label>
-    <input type="text" id="username">
-    <div class="success-message hide">사용할 수 있는 아이디입니다</div>
-    <div class="failure-message hide">아이디는 네 글자 이상이어야 합니다</div>
-  </fieldset>
+    <fieldset>
+      <label>아이디</label>
+      <input type="text" placeholder="아이디를 입력해주세요." id="username" />
+      <div class="success-message hide">사용할 수 있는 아이디입니다.</div>
+      <div class="failure-message hide">
+        아이디는 네 글자 이상이어야 합니다.
+      </div>
+      <div class="id-empty-message hide">필수 정보입니다.</div>
+    </fieldset>
 
-  <fieldset>
-    <label>비밀번호</label>
-    <input type="password" id="password">
-  </fieldset>
+    <fieldset>
+      <label>비밀번호</label>
+      <input
+        type="password"
+        placeholder="비밀번호를 입력해주세요."
+        id="password"
+      />
+      <div class="pw-empty-message hide">필수 정보입니다.</div>
+    </fieldset>
 
-  <fieldset>
-    <label>비밀번호 확인</label>
-    <input type="password" id="password-retype">
-    <div class="mismatch-message hide">비밀번호가 일치하지 않습니다</div>
-  </fieldset>
+    <fieldset>
+      <label>비밀번호 확인</label>
+      <input
+        type="password"
+        placeholder="비밀번호를 입력해주세요."
+        id="password-retype"
+      />
+      <div class="mismatch-message hide">비밀번호가 일치하지 않습니다</div>
+      <div class="pwrt-empty-message hide">필수 정보입니다.</div>
+      <div class="match-message hide">비밀번호가 일치합니다.</div>
+    </fieldset>
 
-  <fieldset>
-    <button>회원가입</button>
-  </fieldset>
+    <fieldset>
+      <label>이름</label>
+      <input type="text" placeholder="이름을 입력해주세요." id="name" />
+      <div class="name-empty-message hide">필수 정보입니다.</div>
+    </fieldset>
 
-  <script src="script.js"></script>
-</body>
+    <fieldset>
+      <label>전화번호</label>
+      <input type="text" placeholder="전화번호를 입력해주세요." id="phone" />
+      <div class="phone-empty-message hide">필수 정보입니다.</div>
+    </fieldset>
 
+    <fieldset>
+      <label>인증번호</label>
+      <input
+        type="text"
+        placeholder="인증번호를 입력해주세요."
+        id="verification"
+      />
+      <div class="verify-empty-message hide">인증이 필요합니다.</div>
+    </fieldset>
+
+    <fieldset>
+      <button>회원가입</button>
+      <div class="failure-message hide">아이디는 네 글자 이상이어야 합니다</div>
+    </fieldset>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,3 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 98%;
+}
+
 .hide {
   display: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  border: none;
+}
+
+fieldset:nth-child(9) {
+  margin-top: 30px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 8px 0px;
+}
+
+input {
+  font-size: 15px;
+  height: 50px;
+}
+
+.success-message,
+.match-message {
+  font-size: small;
+  color: rgb(2, 199, 90);
+  margin-top: 10px;
+}
+
+.failure-message,
+.mismatch-message,
+.empty-message,
+.id-empty-message,
+.pw-empty-message,
+.pwrt-empty-message,
+.name-empty-message,
+.phone-empty-message,
+.verify-empty-message {
+  font-size: small;
+  color: red;
+  margin-top: 10px;
+}
+
+button {
+  font-size: large;
+  height: 50px;
+  color: white;
+  background-color: rgb(2, 199, 90);
 }
