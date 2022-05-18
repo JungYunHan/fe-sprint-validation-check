@@ -155,12 +155,12 @@ signUpButton.onclick = function () {
   if (
     !isEmpty() &&
     isMoreThan4Length(inputUserName.value) &&
-    isMatch(inputPassword, inputPasswordRetype)
+    isMatch(inputPassword.value, inputPasswordRetype.value)
   ) {
     fieldset.forEach.call(fieldset, function (node) {
       node.parentNode.removeChild(node);
     });
     h1.textContent = inputUserName.value + "님 회원가입을 축하드립니다.";
-    img.setAttribute("src", "./img/complete.png");
+    img.setAttribute("src", "./img/keila-hotzel-2VyyvZns3qQ-unsplash.jpg");
   }
 };
